@@ -6,10 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register Manager</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
   </head>
   <body>
-      <section>
+      <section class="outer-box">
           <h1> Cash Bill Register</h1>
+          <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+          <div>
+              <div class="label">Enter Bill Amount:</div>
+              <input type="number" id="amt" > 
+              <button id="next-Btn">Next</button> 
+          </div>
+  
+          <div class="cashGivenInput">
+              <div class="label">Cash Given:</div>
+              <input type="number" id="cashGiven" >
+              <button id="check-Btn">Check</button> 
+          </div>
+          <div class="errorMsg"></div>
+  
+          <div class="changeReturn">
+              <div class="label">Return Change:</div>
+              <div id="output">
+                  <table>
+                      <tr>
+                      <th>Note</td>
+                      <td>2000</td>
+                      <td>500</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>10</td>
+                      <td>5</td>
+                      <td>1</td>
+                      </tr>
+                      <tr>
+                      <th>No.of Notes</td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      <td class="noOfNotes"></td>
+                      </tr>
+  
+                  </table>
+              </div>
+          </div>
       </section>
     <script src="script.js"></script>
   </body>
