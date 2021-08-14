@@ -9,7 +9,7 @@ const checkBtn = document.querySelector("#check-Btn");
 const noOfNotes= document.querySelectorAll(".noOfNotes");
 const arrayNoteAmt = [2000, 500, 100, 20, 10, 5, 1];
 
-//show or hide error
+
 function hideError(){
     errorDiv.style.display = "none";
 }
@@ -20,7 +20,7 @@ function showError(text){
     changeReturnDiv.style.display = "none";
 }
 
-//onClick event to display "Cash Given" input field
+
 nextBtn.addEventListener('click', ()=>{
     hideError(); //hiding error message
     if(Number(amt.value)>0){
@@ -34,7 +34,7 @@ nextBtn.addEventListener('click', ()=>{
 } )
 
 
-//check btn clicked handler
+
 checkBtn.addEventListener('click', ()=>{
     clearNoOfNotes();
     hideError(); //hiding error message
@@ -58,7 +58,7 @@ checkBtn.addEventListener('click', ()=>{
         }
 })
 
-//calculating no. of notes
+
 function calculateNotes(bill, cash){
     let returnAmt = cash-bill;
     
@@ -74,7 +74,7 @@ function calculateNotes(bill, cash){
     
 }
 
-//compare with currency and post the no. of notes on screen
+
 function compare(remainder, noteAmt, index){
 
     if(remainder >= noteAmt){
@@ -85,7 +85,7 @@ function compare(remainder, noteAmt, index){
     return remainder
 }
 
-//clear the table if page not reloaded
+
 function clearNoOfNotes(){
     for(let notes of noOfNotes){
         notes.innerText = "";
